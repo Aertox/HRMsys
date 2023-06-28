@@ -29,6 +29,15 @@
             height: 400px;
             width: 45%;
         }
+        .chart-container2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 1200px;
+            height:400px;
+        }
+
 
     </style>
 
@@ -41,6 +50,25 @@
             <span class="x-red">${sessionScope.user_session.username }</span>
             当前时间:
             <span class="x-red" id="dateTime"></span></blockquote>
+        <fieldset class="layui-elem-field">
+            <legend>公告通知</legend>
+            <div class="layui-field-box">
+                <table class="layui-table" lay-skin="line">
+                    <tbody>
+                    <tr>
+                        <td >
+                            <a class="x-a" href="/" target="_blank">请于6.22日之前到后勤部领取端午福利</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <a class="x-a" href="http://www.w3school.com.cn" target="_blank">项目上线倒计时</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </fieldset>
 
         <fieldset class="layui-elem-field">
             <legend>数据统计</legend>
@@ -49,38 +77,10 @@
                     <div id="chart1" class="chart"></div>
                     <div id="chart2" class="chart"></div>
                 </div>
-
-
             </div>
         </fieldset>
 
-        <fieldset class="layui-elem-field">
-            <legend>数据统计</legend>
-            <div class="layui-field-box">
-                <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-                <div id="main1" style="width: 600px; height:400px;" ></div><!--   -->
 
-            </div>
-        </fieldset>
-        <fieldset class="layui-elem-field">
-            <legend>公告通知</legend>
-            <div class="layui-field-box">
-                <table class="layui-table" lay-skin="line">
-                    <tbody>
-                        <tr>
-                            <td >
-                                <a class="x-a" href="/" target="_blank">请于6.22日之前到后勤部领取端午福利</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td >
-                                <a class="x-a" href="http://www.w3school.com.cn" target="_blank">项目上线倒计时</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </fieldset>
         <fieldset class="layui-elem-field">
             <legend>人数信息</legend>
             <div class="layui-field-box">
@@ -100,9 +100,11 @@
                             <td>1</td></tr>
                     </tbody>
                 </table>
-                <div id="container" style="width: 600px; height:400px;" ></div><!--   -->
-
-
+                <!-- <div id="container" style="width: 600px; height:400px;" ></div>   -->
+                <div class="chart-container2">
+                    <div id="chart3" class="chart"></div>
+                    <div id="chart4" class="chart"></div>
+                </div>
             </div>
         </fieldset>
 
@@ -111,54 +113,6 @@
 
 
         <script>
-        //基于准备好的dom，初始化echarts实例
-        //销售额统计
-        var myChart = echarts.init(document.getElementById('main1'));
-        // 指定图表的配置项和数据
-        var option = {
-            title: {
-                text: '销售额统计'
-            },
-            tooltip: {},
-            legend: {
-                data:['销售额']
-            },
-            xAxis: {
-                data: ["6.17","6.18","6.19","6.20","6.21","6.22"]
-            },
-            yAxis: {},
-            series: [{
-                name: '销量',
-                type: 'bar',
-                data: [4232, 2312, 4115, 3892,3211, 2998]
-            }]
-        };
-
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-
-        //人数统计图表
-        var echart = echarts.init(document.getElementById("container"))
-        var option = {
-            title:{text:"人数统计"},
-            legend:{data:["入职人数","离职人数"]},
-            // tooltip提示  trigger触发器 axis轴线触发，item 当前项触发
-            tooltip:{trigger:"axis"},
-            yAxis:{data:["技术部","后勤部","人事部"]},
-            xAxis:{},
-            series:[
-                {name:"入职人数",type:"bar",data:[30,13,21],stack:true,
-                    // stack堆叠，label 标签，position位置，inside内部，right右侧，formmater格式
-                    // \n 代表换行，{a}系列名 "陈康" {b}数值名 "vue"  {c}数值  80
-                    label:{show:true,position:"insideRight",formatter:"{a}\n{c}人"}},
-                {name:"离职人数",type:"bar",data:[4,5,6],stack:true,
-                    label:{show:true,position:"insideRight",formatter:"{a}\n{c}人"}}
-            ]
-        }
-        echart.setOption(option);
-
-
-
         var chart1 = echarts.init(document.getElementById('chart1'));
         var chart2 = echarts.init(document.getElementById('chart2'));
 
@@ -266,7 +220,90 @@
 
     </script>
 
-    <script type="text/javascript">
+
+        <script>
+        //人数统计图表
+        var chart3 = echarts.init(document.getElementById("chart3"));
+        var chart4 = echarts.init(document.getElementById('chart4'));
+
+
+        var option3 = {
+            title:{text:"人数统计"},
+            legend:{data:["入职人数","离职人数"]},
+            // tooltip提示  trigger触发器 axis轴线触发，item 当前项触发
+            tooltip:{trigger:"axis"},
+            yAxis:{data:["技术部","后勤部","人事部"]},
+            xAxis:{},
+            series:[
+                {name:"入职人数",type:"bar",data:[30,13,21],stack:true,
+                    // stack堆叠，label 标签，position位置，inside内部，right右侧，formmater格式
+                    // \n 代表换行，{a}系列名 "陈康" {b}数值名 "vue"  {c}数值  80
+                    label:{show:true,position:"insideRight",formatter:"{a}\n{c}人"}},
+                {name:"离职人数",type:"bar",data:[4,5,6],stack:true,
+                    label:{show:true,position:"insideRight",formatter:"{a}\n{c}人"}}
+            ]
+        }
+
+        
+
+        var option4 = {
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                top: '5%',
+                left: 'center'
+            },
+            series: [
+                {
+                    name: 'Access From',
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: {
+                        borderRadius: 10,
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    },
+                    label: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: 40,
+                            fontWeight: 'bold'
+                        }
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    data: [
+                        { value: 1048, name: 'Search Engine' },
+                        { value: 735, name: 'Direct' },
+                        { value: 580, name: 'Email' },
+                        { value: 484, name: 'Union Ads' },
+                        { value: 300, name: 'Video Ads' }
+                    ]
+                }
+            ]
+        };
+
+
+        chart3.setOption(option3);
+        chart4.setOption(option4);
+
+        // 监听窗口大小变化，让图表自适应容器大小
+        window.addEventListener('resize', function() {
+            chart3.resize();
+            chart4.resize();
+        });
+        </script>
+
+
+
+        <script type="text/javascript">
 
         Date.prototype.format = function (fmt) {
             var o = {

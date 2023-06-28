@@ -64,7 +64,7 @@
                     <td>${sessionScope.user_session.username }</td></tr>
                 <tr>
                     <th>离职人数</th>
-                    <td>${sessionScope.user_session.id }</td></tr>
+                    <td>${sessionScope.user_session.loginname }</td></tr>
                 <tr>
                     <th>部门入职人数</th>
                     <td>6</td></tr>
