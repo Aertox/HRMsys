@@ -395,7 +395,11 @@
                     data:[30,13,21],
                     stack:true,
                     // stack堆叠，label 标签，position位置，inside内部，right右侧，formmater格式
-                    // \n 代表换行，{a}系列名 "xxx" {b}数值名 "vue"  {c}数值  80
+                    // \n 代表换行，{a}系列名 "xxx" {b}数值名 "vue"  {c}数值  80    #FA7F08
+                    itemStyle:{
+                        color: '#253659'
+                    },
+
                     label:
                         {
                             show:true,
@@ -407,6 +411,9 @@
                     type:"bar",
                     data:[4,5,6],
                     stack:true,
+                    itemStyle:{
+                        color: '#008F8C'
+                    },
                     label:
                         {
                             show:true,
@@ -451,11 +458,11 @@
                         show: false
                     },
                     data: [
-                        { value: 31, name: '技术部' },
-                        { value: 35, name: '运营部' },
-                        { value: 20, name: '财务部' },
-                        { value: 12, name: '总公办' },
-                        { value: 20, name: '教学部' }
+                        { value: 31, name: '技术部' ,itemStyle: { color: '#5D8A66' }},
+                        { value: 35, name: '运营部' ,itemStyle: { color: '#1A6566' }},
+                        { value: 20, name: '财务部' ,itemStyle: { color: '#21445B' }},
+                        { value: 12, name: '总公办' ,itemStyle: { color: '#323050' }},
+                        { value: 20, name: '教学部' ,itemStyle: { color: '#45214A' }}
 
                     ]
                 }
