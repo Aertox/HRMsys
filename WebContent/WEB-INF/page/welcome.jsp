@@ -20,8 +20,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            width: 1200px;
-            height:400px;
+
         }
 
         .chart {
@@ -34,8 +33,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            width: 1200px;
-            height:400px;
+
         }
 
 
@@ -132,82 +130,238 @@
             series: [{
                 name: '销量',
                 type: 'bar',
-                data: [4232, 2312, 4115, 3892,3211, 2998]
+                data: [4232, 2312, 4115, 3892,3211, 2998],
+                itemStyle:{
+                    color: '#23606E'
+                }
             }]
         };
 
-        var option2 = {
-            title:{text:"薪资来源"},
-            legend:{data:["底薪","绩效","年终奖"]},
-            tooltip:{},
-            series:[
-                {type:"pie",radius:[150,80],data:[
-                        {name:"底薪",value:5000,label:{
-                                show:false,
-                                position:"center",
-                                // {d}百分比 {big|内容} 使用样式
-                                formatter:"{big|{d}}{small|%}\n{b}",
-                                // 定义样式（富文本）
-                                rich:{
-                                    big:{
-                                        color:"#404ed8",
-                                        fontSize:"48px",
-                                        fontWeight:900,
-                                    },
-                                    small:{
-                                        color:"#404ed8"
-                                    }
-                                }
-                            },
-                            tooltip:{show:true},
-                            //itemStyle:{color:"#384a99"},
-                        },
-                        {name:"绩效",value:500,label:{
-                                show:false,
-                                position:"center",
-                                // {d}百分比 {big|内容} 使用样式
-                                formatter:"{big|{d}}{small|%}\n{b}",
-                                // 定义样式（富文本）
-                                rich:{
-                                    big:{
-                                        color:"#8c4cf9",
-                                        fontSize:"48px",
-                                        fontWeight:900,
-                                    },
-                                    small:{
-                                        color:"#8c4cf9"
-                                    }
-                                }},
-                            // 样式灰色
-                            itemStyle:{color:"#8c4cf9"},
-                            // 提示不显示
-                            tooltip:{show:true},
-                        },
-                        {name:"年终奖",value:2500,label:{
-                                show:false,
-                                position:"center",
-                                // {d}百分比 {big|内容} 使用样式
-                                formatter:"{big|{d}}{small|%}\n{b}",
-                                // 定义样式（富文本）
-                                rich:{
-                                    big:{
-                                        color:"#00796B",
-                                        fontSize:"48px",
-                                        fontWeight:900,
-                                    },
-                                    small:{
-                                        color:"#00796B"
-                                    }
-                                }},
-                            // 样式灰色
-                            itemStyle:{color:"#00796B"},
-                            // 提示不显示
-                            tooltip:{show:true},
-                        },
 
-                    ]}
+        // var option2 = {
+        //     title:{text:"薪资来源"},
+        //     legend:{data:["底薪","绩效","年终奖"]},
+        //     tooltip:{},
+        //     series:[
+        //         {type:"pie",radius:[150,80],data:[
+        //                 {name:"底薪",value:5000,label:{
+        //                         show:false,
+        //                         position:"center",
+        //                         // {d}百分比 {big|内容} 使用样式
+        //                         formatter:"{big|{d}}{small|%}\n{b}",
+        //                         // 定义样式（富文本）
+        //                         rich:{
+        //                             big:{
+        //                                 color:"#404ed8",
+        //                                 fontSize:"48px",
+        //                                 fontWeight:900,
+        //                             },
+        //                             small:{
+        //                                 color:"#404ed8"
+        //                             }
+        //                         }
+        //                     },
+        //                     tooltip:{show:true},
+        //                     //itemStyle:{color:"#384a99"},
+        //                 },
+        //                 {name:"绩效",value:500,label:{
+        //                         show:false,
+        //                         position:"center",
+        //                         // {d}百分比 {big|内容} 使用样式
+        //                         formatter:"{big|{d}}{small|%}\n{b}",
+        //                         // 定义样式（富文本）
+        //                         rich:{
+        //                             big:{
+        //                                 color:"#8c4cf9",
+        //                                 fontSize:"48px",
+        //                                 fontWeight:900,
+        //                             },
+        //                             small:{
+        //                                 color:"#8c4cf9"
+        //                             }
+        //                         }},
+        //                     // 样式灰色
+        //                     itemStyle:{color:"#8c4cf9"},
+        //                     // 提示不显示
+        //                     tooltip:{show:true},
+        //                 },
+        //                 {name:"年终奖",value:2500,label:{
+        //                         show:false,
+        //                         position:"center",
+        //                         // {d}百分比 {big|内容} 使用样式
+        //                         formatter:"{big|{d}}{small|%}\n{b}",
+        //                         // 定义样式（富文本）
+        //                         rich:{
+        //                             big:{
+        //                                 color:"#00796B",
+        //                                 fontSize:"48px",
+        //                                 fontWeight:900,
+        //                             },
+        //                             small:{
+        //                                 color:"#00796B"
+        //                             }
+        //                         }},
+        //                     // 样式灰色
+        //                     itemStyle:{color:"#00796B"},
+        //                     // 提示不显示
+        //                     tooltip:{show:true},
+        //                 },
+        //
+        //             ]}
+        //     ],
+        // };
+
+
+        var app = {};
+
+
+        var option2;
+
+        const categories = (function () {
+            let now = new Date();
+            let res = [];
+            let len = 10;
+            while (len--) {
+                res.unshift(now.toLocaleTimeString().replace(/^\D*/, ''));
+                now = new Date(+now - 2000);
+            }
+            return res;
+        })();
+        const categories2 = (function () {
+            let res = [];
+            let len = 10;
+            while (len--) {
+                res.push(10 - len - 1);
+            }
+            return res;
+        })();
+        const data = (function () {
+            let res = [];
+            let len = 10;
+            while (len--) {
+                res.push(Math.round(Math.random() * 400));
+            }
+            return res;
+        })();
+        const data2 = (function () {
+            let res = [];
+            let len = 0;
+            while (len < 10) {
+                res.push(Math.floor(Math.random() * 10 + 20));
+                len++;
+            }
+            return res;
+        })();
+        option2 = {
+            title: {
+                text: ' 后台数据'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#283b56'
+                    }
+                }
+            },
+            legend: {},
+            toolbox: {
+                show: true,
+                feature: {
+                    dataView: { readOnly: false },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            dataZoom: {
+                show: false,
+                start: 0,
+                end: 100
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: true,
+                    data: categories
+                },
+                {
+                    type: 'category',
+                    boundaryGap: true,
+                    data: categories2
+                }
             ],
+            yAxis: [
+                {
+                    type: 'value',
+                    scale: true,
+                    name: 'Price',
+                    max: 100,
+                    min: 0,
+                    boundaryGap: [0.2, 0.2]
+                },
+                {
+                    type: 'value',
+                    scale: true,
+                    name: 'Order',
+                    max: 500,
+                    min: 0,
+                    boundaryGap: [0.2, 0.2]
+                }
+            ],
+            series: [
+                {
+                    name: '成交金额',
+                    type: 'bar',
+                    xAxisIndex: 1,
+                    yAxisIndex: 1,
+                    data: data,
+                    itemStyle: {
+                        color: '#008F8C' // 设置柱状图的颜色为红色
+                    }
+                },
+                {
+                    name: '在线人数',
+                    type: 'line',
+                    data: data2,
+                    itemStyle:{
+                        color: '#ffa6a5'
+                    }
+                }
+            ]
         };
+        app.count = 11;
+        setInterval(function () {
+            let axisData = new Date().toLocaleTimeString().replace(/^\D*/, '');
+            data.shift();
+            data.push(Math.round(Math.random() * 400));
+            data2.shift();
+            data2.push(Math.floor(Math.random() * 10 + 20));
+            categories.shift();
+            categories.push(axisData);
+            categories2.shift();
+            categories2.push(app.count++);
+            chart2.setOption({
+                xAxis: [
+                    {
+                        data: categories
+                    },
+                    {
+                        data: categories2
+                    }
+                ],
+                series: [
+                    {
+                        data: data
+                    },
+                    {
+                        data: data2
+                    }
+                ]
+            });
+        }, 2100);
+
+
 
         chart1.setOption(option1);
         chart2.setOption(option2);
@@ -235,12 +389,29 @@
             yAxis:{data:["技术部","后勤部","人事部"]},
             xAxis:{},
             series:[
-                {name:"入职人数",type:"bar",data:[30,13,21],stack:true,
+                {
+                    name:"入职人数",
+                    type:"bar",
+                    data:[30,13,21],
+                    stack:true,
                     // stack堆叠，label 标签，position位置，inside内部，right右侧，formmater格式
-                    // \n 代表换行，{a}系列名 "陈康" {b}数值名 "vue"  {c}数值  80
-                    label:{show:true,position:"insideRight",formatter:"{a}\n{c}人"}},
-                {name:"离职人数",type:"bar",data:[4,5,6],stack:true,
-                    label:{show:true,position:"insideRight",formatter:"{a}\n{c}人"}}
+                    // \n 代表换行，{a}系列名 "xxx" {b}数值名 "vue"  {c}数值  80
+                    label:
+                        {
+                            show:true,
+                            position:"insideRight",
+                            formatter:"{a}\n{c}人"}
+                },
+                {
+                    name:"离职人数",
+                    type:"bar",
+                    data:[4,5,6],
+                    stack:true,
+                    label:
+                        {
+                            show:true,
+                            position:"insideRight",
+                            formatter:"{a}\n{c}人"}}
             ]
         }
 
@@ -280,11 +451,12 @@
                         show: false
                     },
                     data: [
-                        { value: 1048, name: 'Search Engine' },
-                        { value: 735, name: 'Direct' },
-                        { value: 580, name: 'Email' },
-                        { value: 484, name: 'Union Ads' },
-                        { value: 300, name: 'Video Ads' }
+                        { value: 31, name: '技术部' },
+                        { value: 35, name: '运营部' },
+                        { value: 20, name: '财务部' },
+                        { value: 12, name: '总公办' },
+                        { value: 20, name: '教学部' }
+
                     ]
                 }
             ]
