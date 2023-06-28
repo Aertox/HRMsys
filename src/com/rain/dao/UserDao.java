@@ -31,7 +31,7 @@ public interface UserDao {
 
 	@SelectProvider(type=UserDynaSqlProvider.class,method="update_Notice")
 	void update_Info(User employee);
-	// 根据id删除部门
+	// 根据id删除
 	@Delete(" delete from "+USERTABLE+" where id = #{id} ")
 	void delete_Info(Integer id);
 

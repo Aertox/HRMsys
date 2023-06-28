@@ -25,7 +25,7 @@ public interface DocumentDao {
 
 	@SelectProvider(type=DocumentDynaSqlProvider.class,method="update")
 	void update_Info(Document dept);
-	// 根据id删除部门
+
 	@Delete(" delete from "+DOCUMENTTABLE+" where id = #{id} ")
 	void delete_Info(Integer id);
 

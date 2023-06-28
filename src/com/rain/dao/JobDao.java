@@ -28,7 +28,7 @@ public interface JobDao {
 
 		@SelectProvider(type=JobDynaSqlProvider.class,method="updateDept")
 		void update_Info(Job job);
-		// 根据id删除部门
+
 		@Delete(" delete from "+JOBTABLE+" where id = #{id} ")
 		void delete_Info(Integer id);
 }

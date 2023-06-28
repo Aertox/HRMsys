@@ -52,7 +52,7 @@ public class LoginController {
     }
     @RequestMapping("/facesucceed")
     public String Faceloginsucceed(){
-        System.out.println(1222222);
+        System.out.println(1);
         return "succeed";
     }
 

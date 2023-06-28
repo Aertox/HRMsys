@@ -13,10 +13,7 @@ import com.rain.dao.provider.EmployeeDynaSqlProvider;
 import com.rain.domain.Employee;
 
 public interface EmployeeDao {
-	/**
-	 * 
-	 * @return
-	 */
+
 	//查询
 			@Select("select * from "+EMPLOYEETABLE+" ")
 			List<Employee> get_List();
@@ -32,7 +29,7 @@ public interface EmployeeDao {
 
 			@SelectProvider(type=EmployeeDynaSqlProvider.class,method="update_Employee")
 			void update_Info(Employee employee);
-			// 根据id删除部门
+
 			@Delete(" delete from "+EMPLOYEETABLE+" where id = #{id} ")
 			void delete_Info(Integer id);
 			

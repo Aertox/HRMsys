@@ -25,7 +25,7 @@ public interface DeptDao {
 
 	@SelectProvider(type=DeptDynaSqlProvider.class,method="updateDept")
 	void update_Info(Dept dept);
-	// 根据id删除部门
+
 	@Delete(" delete from "+DEPTTABLE+" where id = #{id} ")
 	void delete_Info(Integer id);
 
