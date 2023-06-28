@@ -49,7 +49,7 @@
             <legend>数据统计</legend>
             <div class="layui-field-box">
                 <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-                <div id="main1" style="width: 800px; height:600px;" ></div><!--   -->
+                <div id="main1" style="width: 1200px; height:600px;" ></div><!--   -->
 
             </div>
         </fieldset>
@@ -61,10 +61,10 @@
                 <tbody>
                 <tr>
                     <th>入职人数</th>
-                    <td>${dept.loginname}</td></tr>
+                    <td>${sessionScope.user_session.username }</td></tr>
                 <tr>
                     <th>离职人数</th>
-                    <td>10</td></tr>
+                    <td>${sessionScope.user_session.username }</td></tr>
                 <tr>
                     <th>部门入职人数</th>
                     <td>6</td></tr>

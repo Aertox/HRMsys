@@ -25,14 +25,14 @@
   <body>
     <div class="x-body">
         <form class="layui-form" method="POST" id="deptForm"  action="${ctx}/notice/add">
-        <input type="hidden" name="id" id="id" value="${job.id }" >
+        <input type="hidden" name="id" id="id" value="${notice.id }" >
           <div class="layui-form-item">
               <label for="title" class="layui-form-label">
                   <span class="x-red">*</span>标题
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="title" name="title" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="${job.title }">
+                  autocomplete="off" class="layui-input" value="${notice.title }">
               </div>
              
           </div>
@@ -42,7 +42,7 @@
                      <span class="x-red">*</span> 内容
                     </label>
                     <div class="layui-input-block">
-                        <textarea placeholder="请输入内容" id="content" name="content" class="layui-textarea">${job.content }</textarea>
+                        <textarea placeholder="请输入内容" id="content" name="content" class="layui-textarea">${notice.content }</textarea>
                     </div>
                 </div>
           <div class="layui-form-item">

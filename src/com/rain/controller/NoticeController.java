@@ -35,18 +35,18 @@ public class NoticeController {
 		}
 		@RequestMapping(value="/notice/list",method=RequestMethod.GET)
 		 public String index(Model model,String content){
-			List<Notice> job_list = rainservice.get_NoticeList();
+			List<Notice> notice_list = rainservice.get_NoticeList();
 			if (content!=null){
-				job_list = rainservice.get_NoticeLikeList(content);
+				notice_list = rainservice.get_NoticeLikeList(content);
 			}
-			model.addAttribute("list",job_list);
+			model.addAttribute("list",notice_list);
 			return "notice/list";
 		}
 		@RequestMapping(value="/notice/add",method=RequestMethod.GET)
 		 public String add(Model model,Integer id){
 			if(id!=null){
-				Notice job = rainservice.get_NoticeInfo(id);
-				model.addAttribute("job",job);
+				Notice notice = rainservice.get_NoticeInfo(id);
+				model.addAttribute("notice",notice);
 			}
 			return "/notice/add";
 		}

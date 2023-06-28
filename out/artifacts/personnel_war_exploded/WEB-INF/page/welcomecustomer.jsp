@@ -49,7 +49,7 @@
             <legend>数据统计</legend>
             <div class="layui-field-box">
                 <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-                <div id="main1" style="width: 800px; height:600px;" ></div><!--   -->
+                <div id="main1" style="width: 1200px; height:600px;" ></div><!--   -->
 
             </div>
         </fieldset>
@@ -61,10 +61,10 @@
                 <tbody>
                 <tr>
                     <th>入职人数</th>
-                    <td>${dept.loginname}</td></tr>
+                    <td>${sessionScope.user_session.username }</td></tr>
                 <tr>
                     <th>离职人数</th>
-                    <td>10</td></tr>
+                    <td>${sessionScope.user_session.username }</td></tr>
                 <tr>
                     <th>部门入职人数</th>
                     <td>6</td></tr>
@@ -80,15 +80,7 @@
     </fieldset>
         <blockquote class="layui-elem-quote layui-quote-nm">等待开发</blockquote>
     </div>
-        <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-        </script>
+
 
         <script>
             var echart = echarts.init(document.getElementById("main1"))
@@ -100,48 +92,52 @@
                 // color:["#55aaff","#aaff7f","#55007f","#ffff00"],
                 // 图表的标题
                 title:{
-                    text:"我的第一个图表"
+                    text:"员工画像"
                 },
                 // 图表的提示
                 tooltip:{},
                 // 图例
-                legend:{data:["睡眠时长","玩游戏时长","上课时长"]},
+                legend:{data:["底薪","绩效","项目奖金","年终奖"]},
                 // x轴线
-                xAxis:{data:["周一","周二","周三","周四","周五","周六","周日"]},
+                xAxis:{data:["一月","二月","三月","四月","五月","六月"]},
                 // y轴线
                 yAxis:{},
                 // 设置数据
                 series:[
                     {
                         // 数据名称
-                        name:"睡眠时长",
+                        name:"项目奖金",
                         // 类型为柱状图
                         type:"bar",
                         // 数据data
-                        data:[8,10,4,5,9,4,8],
-                        color:["#ac4cff"]
+                        data:[0,500,0 ,500,300,1000],
+                        color:["#00ABBD"]
                     },
                     {
                         // 数据名称
-                        name:"玩游戏时长",
+                        name:"绩效",
                         // 类型为柱状图
                         type:"line",
                         // 数据data
-                        data:[2,4,1,5,6,8,5]
+                        data:[765,532,587,689,732,654],
+                        color:["#0099DD"]
+
                     },
                     {
                         // 数据名称
-                        name:"上课时长",
+                        name:"月薪资",
                         // 类型为柱状图
                         type:"line",
                         smooth:true,
                         // 数据data
-                        data:[6,7,5,8,6,1,0],
+                        data:[9713,9265,9046,8679,9251,9121],
+                        color:["#FF9933"]
+
                         // areaStyle:"#f70"
 
                     },
                     {
-                        name:"成绩",
+                        name:"薪资组成",
                         // 饼形图
                         type:"pie",
                         // radius:80,
@@ -152,17 +148,20 @@
                         top:-270,
                         // 数据
                         data:[
-                            {name:"js",value:90},
-                            {name:"html",value:85,itemStyle:{
-                                    color:"#ffaa00"
+                            {name:"底薪",value:5000,itemStyle:{
+                                    color:"#026E81"
                                 }},
-                            {name:"jq",value:90,
+                            {name:"项目奖金",value:800,itemStyle:{
+                                    color:"#00ABBD"
+                                }},
+                            {name:"绩效",value:800,
                                 itemStyle:{
-                                    normal:{color:"#93da6c"},
-                                    emphasis:{color:"#bcff57"}
+                                    normal:{color:"#0099DD"},
+                                    emphasis:{color:"#0099DD"}
                                 }
                             },
-                            {name:"vue",value:50},
+                            {name:"年终奖",value:500,itemStyle:{
+                                    color:"#A1C7E0"}},
                         ]
                     }
                 ]

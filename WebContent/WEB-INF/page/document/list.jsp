@@ -64,16 +64,16 @@
             <th>操作</th>
         </thead>
         <tbody>
-        <c:forEach items="${requestScope.list}" var="dept" varStatus="stat">
+        <c:forEach items="${requestScope.list}" var="doc" varStatus="stat">
      <tr>
             <td>
               <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
             </td>
-            <td>${dept.id }</td>
-            <td>${dept.title }</td>
-            <td>${dept.remark }</td>
-            <td>${dept.create_date }</td>
-            <td>${dept.user.name }</td>
+            <td>${doc.id }</td>
+            <td>${doc.title }</td>
+            <td>${doc.remark }</td>
+            <td>${doc.create_date }</td>
+            <td>${doc.user.name }</td>
             
            <!--  <td class="td-status">
               <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td> -->
