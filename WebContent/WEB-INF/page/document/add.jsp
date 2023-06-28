@@ -56,12 +56,14 @@
              
           </div>
           <div class="layui-form-item">
-              <label for="submit" class="layui-form-label">
+              <label for="text" class="layui-form-label">
               </label>
               <input type="submit" value="提交" class="layui-btn" lay-filter="add" lay-submit=""/>
           </div>
+            </form>
 
     </div>
+
     <script>
         layui.use(['form','layer'], function(){
             $ = layui.jquery;

@@ -40,7 +40,7 @@
           <input class="layui-input" placeholder="截止日" name="end" id="end"> -->
           <input type="text" name="content" style="width:50%;"  placeholder="请输入查找标题" autocomplete="off" class="layui-input">
           <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
-            <button class="layui-btn layui-btn-danger" onclick="delAll( )">批量删除</button>
+            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
 
         </form>
       </div>
@@ -131,12 +131,14 @@
 
 
       function delAll (argument) {
-        var data = tableCheck.getData();
-        layer.confirm('确认要删除吗？',function(index){
-            //捉到所有被选中的，发异步进行删除
-            layer.msg('删除成功', {icon: 1,time:1000});
-            $(".layui-form-checked").not('.header').parents('tr').remove();
-        });
+
+          var data = tableCheck.getData();
+
+          layer.confirm('确认要删除吗？'+data,function(index){
+              //捉到所有被选中的，发异步进行删除
+              layer.msg('删除成功', {icon: 1});
+              $(".layui-form-checked").not('.header').parents('tr').remove();
+          });
       }
     </script>
 

@@ -64,7 +64,7 @@
                     <td>${sessionScope.user_session.username }</td></tr>
                 <tr>
                     <th>离职人数</th>
-                    <td>${sessionScope.user_session.username }</td></tr>
+                    <td>${sessionScope.user_session.id }</td></tr>
                 <tr>
                     <th>部门入职人数</th>
                     <td>6</td></tr>
@@ -145,7 +145,7 @@
                         radius:[80,50],
                         // 位移
                         left:-80,
-                        top:-270,
+                        top:-350,
                         // 数据
                         data:[
                             {name:"底薪",value:5000,itemStyle:{
