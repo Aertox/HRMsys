@@ -60,11 +60,12 @@
                     </tr>
                     <tr>
                         <td >
-                            <a class="x-a" href="http://www.w3school.com.cn" target="_blank">项目上线倒计时</a>
+                            <a class="x-a" href="https://github.com/Aertox/hrmsys2.0" target="_blank">项目上线倒计时</a>
                         </td>
                     </tr>
                     </tbody>
                 </table>
+
             </div>
         </fieldset>
 

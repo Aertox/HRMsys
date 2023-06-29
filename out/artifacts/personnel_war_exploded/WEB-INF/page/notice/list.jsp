@@ -98,10 +98,6 @@
           </tr>
 				
 			</c:forEach>
-        
-          
-          
-          
         </tbody>
       </table>
      <!--  <div class="page">

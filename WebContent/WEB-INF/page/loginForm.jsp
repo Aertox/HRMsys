@@ -42,7 +42,7 @@
             <hr class="hr20" >
         </form>
         <form method="post" class="layui-form" action="${ctx}/facelogin/jumpGetface">
-            <input value="刷脸" lay-submit lay-filter="login" style="width:100%;" type="submit">
+            <input value="人脸登陆" lay-submit lay-filter="login" style="width:100%;" type="submit">
 
 
         </form>
