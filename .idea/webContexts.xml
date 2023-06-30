@@ -5,6 +5,7 @@
       <map>
         <entry key="file://$PROJECT_DIR$/WebContent/WEB-INF/page/document/add.jsp" value="file://$PROJECT_DIR$/WebContent/WEB-INF/page/document" />
         <entry key="file://$PROJECT_DIR$/WebContent/WEB-INF/page/employee/add.jsp" value="file://$PROJECT_DIR$/WebContent/WEB-INF/page/employee" />
+        <entry key="file://$PROJECT_DIR$/WebContent/WEB-INF/page/employee/list.jsp" value="file://$PROJECT_DIR$/WebContent/WEB-INF/page/employee" />
         <entry key="file://$PROJECT_DIR$/WebContent/WEB-INF/page/notice/list.jsp" value="file://$PROJECT_DIR$/WebContent/WEB-INF/page/notice" />
       </map>
     </option>

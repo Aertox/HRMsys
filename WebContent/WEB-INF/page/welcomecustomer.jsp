@@ -61,26 +61,15 @@
             <table class="layui-table">
                 <tbody>
                 <tr>
-                    <th>入职人数</th>
-                    <td>${sessionScope.user_session.username }</td>
-                </tr>
-                <tr>
-                    <th>离职人数</th>
-                    <td>${sessionScope.user_session.loginname }</td>
-                </tr>
-                <tr>
-                    <th>部门入职人数</th>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <th>部门离职人数</th>
-                    <td>1</td>
+                    <th>部门</th>
+                    <td>技术部</td>
+                    <th>入职时间</th>
+                    <td>2023-06-23</td>
+                    <th>入职年限</th>
+                    <td>未满一年</td>
                 </tr>
                 </tbody>
             </table>
-            <div id="container" style="width: 300px; height:300px;"></div><!--   -->
-
-
         </div>
     </fieldset>
     <blockquote class="layui-elem-quote layui-quote-nm">等待开发</blockquote>
