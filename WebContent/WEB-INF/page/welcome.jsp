@@ -88,11 +88,11 @@
             <table class="layui-table">
                 <tbody>
                 <tr>
-                    <th>入职人数</th>
-                    <td>65</td>
+                    <th>90天之内入职人数</th>
+                    <td>15</td>
                 </tr>
                 <tr>
-                    <th>离职人数</th>
+                    <th>90天之内离职人数</th>
                     <td>10</td>
                 </tr>
                 <tr>
@@ -313,7 +313,7 @@
         legend: {data: ["入职人数", "离职人数"]},
         // tooltip提示  trigger触发器 axis轴线触发，item 当前项触发
         tooltip: {trigger: "axis"},
-        yAxis: {data: ["技术部", "后勤部", "人事部"]},
+        yAxis: {data: ["技术部", "市场部", "人事部"]},
         xAxis: {},
         series: [
             {
@@ -390,8 +390,8 @@
                     {value: 31, name: '技术部', itemStyle: {color: '#5D8A66'}},
                     {value: 35, name: '运营部', itemStyle: {color: '#1A6566'}},
                     {value: 20, name: '财务部', itemStyle: {color: '#21445B'}},
-                    {value: 12, name: '总公办', itemStyle: {color: '#323050'}},
-                    {value: 20, name: '教学部', itemStyle: {color: '#45214A'}}
+                    {value: 12, name: '行政部', itemStyle: {color: '#323050'}},
+                    {value: 20, name: '市场部', itemStyle: {color: '#45214A'}}
 
                 ]
             }

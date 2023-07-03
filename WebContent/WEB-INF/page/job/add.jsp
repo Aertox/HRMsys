@@ -28,7 +28,8 @@
         <input type="hidden" name="id" id="id" value="${job.id }" >
           <div class="layui-form-item">
               <label for="name" class="layui-form-label">
-                  <span class="x-red">*</span>职位名称
+                  <i class="layui-icon">&#xe66f;
+                  </i>职位名称
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="name" name="name" required="" lay-verify="required"
@@ -38,7 +39,8 @@
           </div>
           <div class="layui-form-item">
               <label for="remark" class="layui-form-label">
-                  <span class="x-red">*</span>详细信息
+                  <i class="layui-icon">&#xe63c;
+                  </i>详细信息
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="remark" name="remark" required="" lay-verify="required"

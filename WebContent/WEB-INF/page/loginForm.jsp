@@ -24,15 +24,15 @@
 <body class="login-bg">
 
 <div class="login layui-anim layui-anim-up">
-    <div class="message">HRM员工之家-管理登录</div>
+    <div class="message">L  O  G  I  N</div>
     <div id="darkbannerwrap"></div>
     ${requestScope.message}
     <form method="post" class="layui-form" action="${ctx}/login">
         <input name="loginname" placeholder="用户名" value="${loginname }" type="text" lay-verify="required"
                class="layui-input">
-        <hr class="hr15">
+        <hr class="hr20">
         <input name="password" lay-verify="required" placeholder="密码" type="password" class="layui-input">
-        <hr class="hr15">
+        <hr class="hr20">
         <select class="layui-input" name="tip">
             <option value="1">管理员</option>
             <option value="2">用户</option>

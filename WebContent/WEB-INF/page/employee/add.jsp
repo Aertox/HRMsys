@@ -28,7 +28,8 @@
         <input type="hidden" name="id" id="id" value="${job.id }" >
           <div class="layui-form-item" >
               <label for="name" class="layui-form-label">
-                  <span class="x-red">*</span>姓名
+                  <i class="layui-icon">&#xe66f;
+                  </i>姓名
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="name" name="name" required="" lay-verify="required"
@@ -38,7 +39,8 @@
           </div>
           <div class="layui-form-item" >
               <label for="password" class="layui-form-label">
-                  <span class="x-red">*</span>密码
+                  <i class="layui-icon">&#xe673;
+                  </i>密码
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="password" name="password" required="" lay-verify="required"
@@ -48,7 +50,8 @@
           </div>
           <div class="layui-form-item" >
               <label for="card_id" class="layui-form-label">
-                  <span class="x-red">*</span>身份证号码
+                  <i class="layui-icon">&#xe63c;
+                  </i>身份证号码
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="card_id" name="card_id" required="" lay-verify="required"
@@ -57,7 +60,8 @@
           </div>
            <div class="layui-form-item">
               <label for="sex" class="layui-form-label">
-                  <span class="x-red">*</span>性别
+                  <i class="layui-icon">&#xe66f;
+                  </i>性别
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="sex" name="sex" placeholder="男性请输入1，女性请输入2" required="" lay-verify="required"
@@ -66,7 +70,8 @@
           </div>
            <div class="layui-form-item">
               <label for="education" class="layui-form-label">
-                  <span class="x-red">*</span>学历
+                  <i class="layui-icon">&#xe705;
+                  </i>学历
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="education" name="education" required="" lay-verify="required"
@@ -75,7 +80,8 @@
           </div>
            <div class="layui-form-item">
               <label for="email" class="layui-form-label">
-                  <span class="x-red">*</span>邮箱
+                  <i class="layui-icon">&#xe7ae;
+                  </i>邮箱
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="email" name="email" required="" lay-verify="required"
@@ -84,7 +90,8 @@
           </div>
            <div class="layui-form-item">
               <label for="phone" class="layui-form-label">
-                  <span class="x-red">*</span>手机
+                  <i class="layui-icon">&#xe63b;
+                  </i>手机
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="phone" name="phone" required="" lay-verify="required"
@@ -93,7 +100,8 @@
           </div>
           <div class="layui-form-item">
               <label for="address" class="layui-form-label">
-                  <span class="x-red">*</span>联系地址
+                  <i class="layui-icon">&#xe715;
+                  </i>联系地址
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="address" name="address" required="" lay-verify="required"
@@ -102,7 +110,8 @@
           </div>
   			<div class="layui-form-item">
               <label for="phone" class="layui-form-label">
-                  <span class="x-red">*</span>职位
+                  <i class="layui-icon">&#xe770;
+                  </i>职位
               </label>
               <div class="layui-input-inline">
                   <select id="job_id" name="job_id" class="valid" >
@@ -114,7 +123,8 @@
           </div>
             <div class="layui-form-item">
               <label for="dept_id" class="layui-form-label">
-                  <span class="x-red">*</span>部门
+                  <i class="layui-icon">&#xe770;
+                  </i>部门
               </label>
               <div class="layui-input-inline">
                   <select id="dept_id" name="dept_id" class="valid">

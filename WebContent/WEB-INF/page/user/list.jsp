@@ -30,12 +30,13 @@
         <a>
           <cite>用户信息</cite></a>
       </span>
-    <button type="button" onclick="location.href='${ctx}/user/add'" class="layui-btn layui-btn-small"
-            style="line-height:1.6em;margin-top:3px;margin-left:75%;;"><i class="layui-icon"></i>增加
-    </button>
     <c:choose>
         <c:when test="${sessionScope.tip  == 1 }">
-            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
+    <button type="button" onclick="location.href='${ctx}/user/add'" class="layui-btn layui-btn-small"
+            style="line-height:1.6em;margin-top:3px;margin-left:75%;;"><i class="layui-icon">&#xe608;</i>增加
+    </button>
+
+            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button>
         </c:when>
     </c:choose>
 
@@ -48,7 +49,7 @@
             <input type="text" name="content" style="width:50%;" placeholder="请输入查找登陆名" autocomplete="off"
                    class="layui-input">
             <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
-            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;" href="${ctx }/user/list"
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:0px;" href="${ctx }/user/list"
                title="刷新">
                 <i class="layui-icon" style="line-height:38px">&#xe666;
                 </i></a>

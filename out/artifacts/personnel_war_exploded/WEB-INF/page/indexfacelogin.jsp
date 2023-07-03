@@ -24,14 +24,14 @@
 <body>
 <!-- 顶部开始 -->
 <div class="container">
-    <div class="logo"><a href="./faceindex.jsp">人事管理系统</a></div>
+    <div class="logo"><a href="./faceindex.jsp">HRMsys</a></div>
     <div class="left_open">
         <i title="展开左侧栏" class="iconfont">&#xe699;</i>
     </div>
 
     <ul class="layui-nav right" lay-filter="">
         <li class="layui-nav-item">
-            <a href="javascript:;">人脸识别用户${sessionScope.user_session.username }</a>
+            <a href="javascript:;">人脸识别用户${session.userinf}</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
                 <dd><a onclick="x_admin_show('个人信息','${ctx}/user/myupdate')">个人信息</a></dd>
                 <dd><a onclick="x_admin_show('切换帐号','${ctx}/user/logout')">切换帐号</a></dd>

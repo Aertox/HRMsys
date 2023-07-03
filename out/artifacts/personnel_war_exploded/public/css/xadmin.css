@@ -30,12 +30,10 @@ body{
     max-width: 420px;
     padding: 40px;
     background-color: rgba(160, 197, 213, 0.1);
-
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 4px;
-    /* overflow-x: hidden; */
+    border-radius: 20px;
+    box-shadow: 0 0 17px #f5eded;
     box-sizing: border-box;
+    /* overflow-x: hidden; */
 }
 .login a.logo{
     display: block;
@@ -45,35 +43,38 @@ body{
     background-size: 167px 42px;
 }
 .login .message {
-    margin: 10px 0 0 -58px;
-    padding: 18px 10px 18px 60px;
-    background: #189F92;
+    /*margin: 10px 0 0 -58px;*/
+    padding: 20px 40px 20px 70px;
     position: relative;
     color: #fff;
-    font-size: 16px;
+    font-size: 45px;
+    /*background-color: rgba(160, 197, 213, 0.1);
+    border-radius: 20px;
+     overflow-x: hidden;
+    box-shadow: 0 0 17px #f5eded;
+    散光范围和颜色
+    box-sizing: border-box;*/
 }
-.login #darkbannerwrap {
+/*.login #darkbannerwrap {
     background: url(../images/aiwrap.png);
     width: 18px;
     height: 10px;
     margin: 0 0 20px -58px;
     position: relative;
-}
+}*/
 
 .login input[type=text],
 .login input[type=file],
 .login input[type=password],
 .login input[type=email], select {
-    border: 1px solid #DCDEE0;
-    vertical-align: middle;
-    border-radius: 3px;
-    height: 50px;
-    padding: 0px 16px;
-    font-size: 14px;
-    color: #555555;
-    outline:none;
-    width:100%;
-    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    outline: none;
+    border: 0;
+    padding: 10px;
+    border-bottom: 3px solid #162831;
+    background-color: transparent;
+    font: 900 16px '';
 }
 .login input[type=text]:focus,
 .login input[type=file]:focus,
@@ -94,7 +95,7 @@ body{
     vertical-align: middle;
     cursor: pointer;
     color: #ffffff;
-    background-color: #189F92;
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 3px;
     border: none;
     -webkit-appearance: none;
@@ -318,6 +319,7 @@ xblock{
     padding: 10px 15px 10px 20px;
     display: block;
     cursor: pointer;
+    color: #2F4056;
 }
 .left-nav #nav li a cite{
     font-size: 14px;

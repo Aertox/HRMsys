@@ -28,7 +28,8 @@
         <input type="hidden" name="id" id="id" value="${job.id }" >
           <div class="layui-form-item">
               <label for="username" class="layui-form-label">
-                  <span class="x-red">*</span>登录名
+                  <i class="layui-icon">&#xe66f;
+                  </i> 登录名
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="loginname" name="loginname" required="" lay-verify="required"
@@ -38,7 +39,8 @@
           </div>
          <div class="layui-form-item">
               <label for="username" class="layui-form-label">
-                  <span class="x-red">*</span>用户名
+                  <i class="layui-icon">&#xe66f;
+                  </i>用户名
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="username" name="username" required="" lay-verify="required"
@@ -48,7 +50,8 @@
           </div>
            <div class="layui-form-item">
               <label for="username" class="layui-form-label">
-                  <span class="x-red">*</span>密码
+                  <i class="layui-icon">&#xe673;
+                  </i>  密码
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="password" name="password" required="" lay-verify="required"
