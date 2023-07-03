@@ -28,7 +28,8 @@
         <input type="hidden" name="id" id="id" value="${notice.id }" >
           <div class="layui-form-item">
               <label for="title" class="layui-form-label">
-                  <span class="x-red">*</span>标题
+                  <i class="layui-icon" style="line-height:38px">&#xe66e;
+                  </i>  标题
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="title" name="title" required="" lay-verify="required"
@@ -39,7 +40,8 @@
         
           <div class="layui-form-item layui-form-text">
                     <label for="content" class="layui-form-label">
-                     <span class="x-red">*</span> 内容
+                        <i class="layui-icon" style="line-height:38px">&#xe621;
+                        </i> 内容
                     </label>
                     <div class="layui-input-block">
                         <textarea placeholder="请输入内容" id="content" name="content" class="layui-textarea">${notice.content }</textarea>

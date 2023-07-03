@@ -105,12 +105,13 @@
                         <i class="layui-icon">&#xe640;</i>
                     </a>
 
-                </td>
+
                 </c:when>
                 </c:choose>
                 <a title="下载" href="${ctx}/document/download?fileName=${doc.filename }">
                     <i class="layui-icon">&#xe601;</i>
                 </a>
+                </td>
             </tr>
 
         </c:forEach>

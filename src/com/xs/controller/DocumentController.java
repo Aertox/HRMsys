@@ -53,8 +53,8 @@ public class DocumentController {
 		@RequestMapping(value="/document/add",method=RequestMethod.GET)
 		 public String add(Model model,Integer id){
 			if(id!=null){
-				Document job = rainservice.get_DocumentInfo(id);
-				model.addAttribute("job",job);
+				Document doc = rainservice.get_DocumentInfo(id);
+				model.addAttribute("doc",doc);
 			}
 			return "/document/add";
 		}

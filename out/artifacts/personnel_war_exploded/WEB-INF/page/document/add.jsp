@@ -26,30 +26,33 @@
 <body>
 <div class="x-body">
     <form class="layui-form" method="POST" id="deptForm" enctype="multipart/form-data" action="${ctx}/document/add">
-        <input type="hidden" name="id" id="id" value="${job.id }">
+        <input type="hidden" name="id" id="id" value="${doc.id }">
         <div class="layui-form-item">
             <label for="title" class="layui-form-label">
-                <span class="x-red">*</span>标题
+                <i class="layui-icon">&#xe655;
+                </i>标题
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="title" name="title" required="" lay-verify="required"
-                       autocomplete="off" class="layui-input" value="${job.title }">
+                       autocomplete="off" class="layui-input" value="${doc.title }">
             </div>
 
         </div>
         <div class="layui-form-item">
             <label for="remark" class="layui-form-label">
-                <span class="x-red">*</span>描述
+                <i class="layui-icon">
+                </i>描述
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="remark" name="remark" required="" lay-verify="required"
-                       autocomplete="off" class="layui-input" value="${job.remark }">
+                       autocomplete="off" class="layui-input" value="${doc.remark }">
             </div>
 
         </div>
         <div class="layui-form-item">
             <label for="file" class="layui-form-label">
-                <span class="x-red">*</span>上传文件
+                <i class="layui-icon">
+                </i>上传文件
             </label>
             <div class="layui-input-inline">
                 <input type="file" id="file" name="file">

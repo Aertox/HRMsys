@@ -102,8 +102,8 @@ public class UserController {
 		@RequestMapping(value="/user/add",method=RequestMethod.GET)
 		 public String add(Model model,Integer id){
 			if(id!=null){
-				User job = rainservice.get_UserInfo(id);
-				model.addAttribute("job",job);
+				User users = rainservice.get_UserInfo(id);
+				model.addAttribute("users",users);
 			}
 			return "/user/add";
 		}

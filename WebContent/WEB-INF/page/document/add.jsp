@@ -26,7 +26,7 @@
 <body>
 <div class="x-body">
     <form class="layui-form" method="POST" id="deptForm" enctype="multipart/form-data" action="${ctx}/document/add">
-        <input type="hidden" name="id" id="id" value="${job.id }">
+        <input type="hidden" name="id" id="id" value="${doc.id }">
         <div class="layui-form-item">
             <label for="title" class="layui-form-label">
                 <i class="layui-icon">&#xe655;
@@ -34,7 +34,7 @@
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="title" name="title" required="" lay-verify="required"
-                       autocomplete="off" class="layui-input" value="${job.title }">
+                       autocomplete="off" class="layui-input" value="${doc.title }">
             </div>
 
         </div>
@@ -45,7 +45,7 @@
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="remark" name="remark" required="" lay-verify="required"
-                       autocomplete="off" class="layui-input" value="${job.remark }">
+                       autocomplete="off" class="layui-input" value="${doc.remark }">
             </div>
 
         </div>
