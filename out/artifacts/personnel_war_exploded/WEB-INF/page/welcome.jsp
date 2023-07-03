@@ -96,13 +96,10 @@
                     <td>10</td>
                 </tr>
                 <tr>
-                    <th>部门入职人数</th>
-                    <td>6</td>
+                    <th>在职人数</th>
+                    <td>121</td>
                 </tr>
-                <tr>
-                    <th>部门离职人数</th>
-                    <td>1</td>
-                </tr>
+
                 </tbody>
             </table>
             <!-- <div id="container" style="width: 600px; height:400px;" ></div>   -->
@@ -137,7 +134,7 @@
         series: [{
             name: '销量',
             type: 'bar',
-            data: [4232, 2312, 4115, 3892, 3211, 2998],
+            data: [4232, 7312, 4115, 3892, 3211, 2998],
             itemStyle: {
                 color: '#23606E'
             }
@@ -145,83 +142,7 @@
     };
 
 
-    // var option2 = {
-    //     title:{text:"薪资来源"},
-    //     legend:{data:["底薪","绩效","年终奖"]},
-    //     tooltip:{},
-    //     series:[
-    //         {type:"pie",radius:[150,80],data:[
-    //                 {name:"底薪",value:5000,label:{
-    //                         show:false,
-    //                         position:"center",
-    //                         // {d}百分比 {big|内容} 使用样式
-    //                         formatter:"{big|{d}}{small|%}\n{b}",
-    //                         // 定义样式（富文本）
-    //                         rich:{
-    //                             big:{
-    //                                 color:"#404ed8",
-    //                                 fontSize:"48px",
-    //                                 fontWeight:900,
-    //                             },
-    //                             small:{
-    //                                 color:"#404ed8"
-    //                             }
-    //                         }
-    //                     },
-    //                     tooltip:{show:true},
-    //                     //itemStyle:{color:"#384a99"},
-    //                 },
-    //                 {name:"绩效",value:500,label:{
-    //                         show:false,
-    //                         position:"center",
-    //                         // {d}百分比 {big|内容} 使用样式
-    //                         formatter:"{big|{d}}{small|%}\n{b}",
-    //                         // 定义样式（富文本）
-    //                         rich:{
-    //                             big:{
-    //                                 color:"#8c4cf9",
-    //                                 fontSize:"48px",
-    //                                 fontWeight:900,
-    //                             },
-    //                             small:{
-    //                                 color:"#8c4cf9"
-    //                             }
-    //                         }},
-    //                     // 样式灰色
-    //                     itemStyle:{color:"#8c4cf9"},
-    //                     // 提示不显示
-    //                     tooltip:{show:true},
-    //                 },
-    //                 {name:"年终奖",value:2500,label:{
-    //                         show:false,
-    //                         position:"center",
-    //                         // {d}百分比 {big|内容} 使用样式
-    //                         formatter:"{big|{d}}{small|%}\n{b}",
-    //                         // 定义样式（富文本）
-    //                         rich:{
-    //                             big:{
-    //                                 color:"#00796B",
-    //                                 fontSize:"48px",
-    //                                 fontWeight:900,
-    //                             },
-    //                             small:{
-    //                                 color:"#00796B"
-    //                             }
-    //                         }},
-    //                     // 样式灰色
-    //                     itemStyle:{color:"#00796B"},
-    //                     // 提示不显示
-    //                     tooltip:{show:true},
-    //                 },
-    //
-    //             ]}
-    //     ],
-    // };
-
-
     var app = {};
-
-
     var option2;
 
     const categories = (function () {
