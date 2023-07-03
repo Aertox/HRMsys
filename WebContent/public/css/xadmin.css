@@ -318,6 +318,7 @@ xblock{
     padding: 10px 15px 10px 20px;
     display: block;
     cursor: pointer;
+    color: #2F4056;
 }
 .left-nav #nav li a cite{
     font-size: 14px;

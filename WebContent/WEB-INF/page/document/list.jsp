@@ -50,7 +50,8 @@
             <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
             <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;"
                href="${ctx }/document/list" title="刷新">
-                <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+                <i class="layui-icon" style="line-height:38px">&#xe666;
+                </i></a>
         </form>
     </div>
     <%-- <xblock>
@@ -84,7 +85,8 @@
                 <td>${doc.title }</td>
                 <td>${doc.remark }</td>
                 <td>${doc.create_date }</td>
-                <td>${doc.user.name }</td>
+                <td>${doc.user_id }</td>
+
 
                 <!--  <td class="td-status">
                    <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td> -->
@@ -100,6 +102,8 @@
                     </a>
                     <a title="删除" onclick="member_del(this,'${doc.id }')" href="javascript:;">
                         <i class="layui-icon">&#xe640;</i>
+                    </a>
+                    <a href="${ctx}/document/download?fileName=${doc.filename }"><i class="layui-icon">&#xe601;</i>
                     </a>
                 </td>
                 </c:when>

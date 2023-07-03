@@ -2,6 +2,7 @@ package com.xs.controller;
 
 import com.xs.service.LoginService;
 import com.xs.util.GsonUtils;
+import com.xs.util.common.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

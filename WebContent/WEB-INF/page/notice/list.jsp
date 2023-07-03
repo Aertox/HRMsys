@@ -52,7 +52,8 @@
             <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
             <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;" href="${ctx }/notice/list"
                title="刷新">
-                <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+                <i class="layui-icon" style="line-height:38px">&#xe666;
+                </i></a>
             <!--<button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>-->
         </form>
     </div>

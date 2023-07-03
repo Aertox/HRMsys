@@ -47,7 +47,8 @@
           <input type="text" name="content" style="width:50%;"  placeholder="请输入查找部门名称" autocomplete="off" class="layui-input">
           <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
             <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;" href="javascript:location.replace(location.href);" title="刷新">
-                <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+                <i class="layui-icon" style="line-height:38px">&#xe666;
+                </i></a>
         </form>
       </div>
       <%-- <xblock>
