@@ -88,8 +88,6 @@
                 <td>${doc.remark }</td>
                 <td>${doc.create_date }</td>
                 <td>${doc.user_id }</td>
-
-
                 <!--  <td class="td-status">
                    <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td> -->
 
@@ -97,26 +95,25 @@
                    <i class="layui-icon">&#xe601;</i>
                  </a> -->
                     <%-- <a title="编辑"  onclick="x_admin_show('编辑','${ctx}/job/add?id=${dept.id }');" href="javascript:;"> --%>
+                <td>
                 <c:choose>
-                <c:when test="${sessionScope.tip  == 1 }">
-                <td class="td-manage">
-                    <a title="编辑" onclick="x_admin_show('编辑','${ctx}/document/add?id=${doc.id }');" href="javascript:;">
-                        <i class="layui-icon">&#xe642;</i>
-                    </a>
-                    <a title="删除" onclick="member_del(this,'${doc.id }')" href="javascript:;">
-                        <i class="layui-icon">&#xe640;</i>
-                    </a>
+                    <c:when test="${sessionScope.tip  == 1 }">
 
+                    <button class="layui-btn layui-btn-normal" title="编辑" onclick="x_admin_show('编辑','${ctx}/document/add?id=${doc.id }');" href="javascript:;">
+                        编辑 <i class="layui-icon">&#xe642;</i>
+                    </button>
+                    <button class="layui-btn layui-btn-warm" title="删除" onclick="member_del(this,'${doc.id }')" href="javascript:;">
+                        删除<i class="layui-icon">&#xe640;</i>
+                    </button>
                     </c:when>
-                    </c:choose>
-
+                </c:choose>
+                    <i class="">&#8195;</i>
                     <a title="下载" href="${ctx}/document/download?fileName=${doc.filename }">
-                        <i class="layui-icon">&#xe601;</i>
+                        <button class="layui-btn">下载<i class="layui-icon">&#xe601;</i></button>
                     </a>
-                </td>
+                    </td>
+                </c:forEach>
             </tr>
-
-        </c:forEach>
 
 
         </tbody>

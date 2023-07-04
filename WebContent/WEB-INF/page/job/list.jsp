@@ -95,13 +95,13 @@
                                <i class="layui-icon">&#xe601;</i>
                              </a> -->
                                 <%-- <a title="编辑"  onclick="x_admin_show('编辑','${ctx}/job/add?id=${dept.id }');" href="javascript:;"> --%>
-                            <a title="编辑" onclick="x_admin_show('编辑','${ctx}/job/add?id=${job.id }');"
+                            <button class="layui-btn layui-btn-normal" title="编辑" onclick="x_admin_show('编辑','${ctx}/job/add?id=${job.id }');"
                                href="javascript:;">
-                                <i class="layui-icon">&#xe642;</i>
-                            </a>
-                            <a title="删除" onclick="member_del(this,'${job.id }')" href="javascript:;">
-                                <i class="layui-icon">&#xe640;</i>
-                            </a>
+                                编辑<i class="layui-icon">&#xe642;</i>
+                            </button>
+                            <button class="layui-btn layui-btn-warm" title="删除" onclick="member_del(this,'${job.id }')" href="javascript:;">
+                                删除<i class="layui-icon">&#xe640;</i>
+                            </button>
                         </td>
                     </c:when>
 

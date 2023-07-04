@@ -46,10 +46,8 @@
 
 <div class="x-body layui-anim layui-anim-up">
     <blockquote class="layui-elem-quote">
-        欢迎管理员：
-        <span class="x-red">${sessionScope.user_session.username }</span>
-        当前时间:
-        <span class="x-red" id="dateTime"></span></blockquote>
+        欢迎管理员:<span class="x-red">${sessionScope.user_session.username }</span>
+        当前时间:<span class="x-red" id="dateTime"></span></blockquote>
     <fieldset class="layui-elem-field">
         <legend>公告通知</legend>
         <div class="layui-field-box">

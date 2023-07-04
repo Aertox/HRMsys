@@ -34,7 +34,8 @@
         <button type="button" onclick="location.href='${ctx}/dept/add'" class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;margin-left:75%;;"  >
             <i class="layui-icon">&#xe608;</i>增加</button>
 
-                <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button>
+                <button class="layui-btn layui-btn-danger" onclick="delAll()">
+                    <i class="layui-icon">&#xe640;</i>批量删除</button>
             </c:when>
         </c:choose>
 
@@ -90,12 +91,12 @@
                 <i class="layui-icon">&#xe601;</i>
               </a> -->
               
-              <a title="编辑"  onclick="x_admin_show('编辑','${ctx}/dept/add?id=${dept.id }');" href="javascript:;">
-                <i class="layui-icon">&#xe642;</i>
-              </a>
-              <a title="删除" onclick="member_del(this,'${dept.id }')" href="javascript:;">
-                <i class="layui-icon">&#xe640;</i>
-              </a>
+              <button  class="layui-btn layui-btn-normal" title="编辑"  onclick="x_admin_show('编辑','${ctx}/dept/add?id=${dept.id }');" href="javascript:;">
+                  编辑<i class="layui-icon">&#xe642;</i>
+              </button>
+              <button  class="layui-btn layui-btn-warm" title="删除" onclick="member_del(this,'${dept.id }')" href="javascript:;">
+                  删除 <i class="layui-icon">&#xe640;</i>
+              </button>
             </td>
             </c:when>
 					        

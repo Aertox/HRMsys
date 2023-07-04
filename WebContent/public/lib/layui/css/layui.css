@@ -1775,7 +1775,7 @@ a cite {
     height: 38px;
     line-height: 38px;
     padding: 0 18px;
-    background-color: #009688;
+    background-color: #345A78;
     color: #fff;
     white-space: nowrap;
     text-align: center;
@@ -1840,15 +1840,15 @@ a cite {
 }
 
 .layui-btn-normal {
-    background-color: #1E9FFF
+    background-color: #698A9E
 }
 
 .layui-btn-warm {
-    background-color: #FFB800
+    background-color: #DB9F40
 }
 
 .layui-btn-danger {
-    background-color: #FF5722
+    background-color: #B65F63
 }
 
 .layui-btn-disabled, .layui-btn-disabled:active, .layui-btn-disabled:hover {
