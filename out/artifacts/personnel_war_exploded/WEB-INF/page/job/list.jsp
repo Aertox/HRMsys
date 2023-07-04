@@ -32,11 +32,12 @@
       </span>
     <c:choose>
         <c:when test="${sessionScope.tip  == 1 }">
-    <button type="button" onclick="location.href='${ctx}/job/add'" class="layui-btn layui-btn-small"
-            style="line-height:1.6em;margin-top:3px;margin-left:75%;;"><i class="layui-icon">&#xe608;</i>增加
-    </button>
+            <button type="button" onclick="location.href='${ctx}/job/add'" class="layui-btn layui-btn-small"
+                    style="line-height:1.6em;margin-top:3px;margin-left:75%;;"><i class="layui-icon">&#xe608;</i>增加
+            </button>
 
-            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button>
+            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除
+            </button>
         </c:when>
     </c:choose>
 
@@ -94,7 +95,8 @@
                                <i class="layui-icon">&#xe601;</i>
                              </a> -->
                                 <%-- <a title="编辑"  onclick="x_admin_show('编辑','${ctx}/job/add?id=${dept.id }');" href="javascript:;"> --%>
-                            <a title="编辑" href="${ctx}/job/add?id=${job.id }">
+                            <a title="编辑" onclick="x_admin_show('编辑','${ctx}/job/add?id=${job.id }');"
+                               href="javascript:;">
                                 <i class="layui-icon">&#xe642;</i>
                             </a>
                             <a title="删除" onclick="member_del(this,'${job.id }')" href="javascript:;">

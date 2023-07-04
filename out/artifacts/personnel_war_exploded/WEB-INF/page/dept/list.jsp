@@ -91,7 +91,6 @@
               </a> -->
               
               <a title="编辑"  onclick="x_admin_show('编辑','${ctx}/dept/add?id=${dept.id }');" href="javascript:;">
-             
                 <i class="layui-icon">&#xe642;</i>
               </a>
               <a title="删除" onclick="member_del(this,'${dept.id }')" href="javascript:;">

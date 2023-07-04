@@ -32,11 +32,12 @@
       </span>
     <c:choose>
         <c:when test="${sessionScope.tip  == 1 }">
-    <button type="button" onclick="location.href='${ctx}/user/add'" class="layui-btn layui-btn-small"
-            style="line-height:1.6em;margin-top:3px;margin-left:75%;;"><i class="layui-icon">&#xe608;</i>增加
-    </button>
+            <button type="button" onclick="location.href='${ctx}/user/add'" class="layui-btn layui-btn-small"
+                    style="line-height:1.6em;margin-top:3px;margin-left:75%;;"><i class="layui-icon">&#xe608;</i>增加
+            </button>
 
-            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button>
+            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除
+            </button>
         </c:when>
     </c:choose>
 
@@ -57,7 +58,7 @@
     </div>
     <%-- <xblock>
 <!--        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button> -->
-      <button class="layui-btn" onclick="x_admin_show('添加用户','${ctx}/dept/add')"><i class="layui-icon"></i>添加</button>
+      <button class="layui-btn" onclick="x_admin_show('添加用户','${ctx}/users/add')"><i class="layui-icon"></i>添加</button>
       <span class="x-right" style="line-height:40px">共有数据：88 条</span>
     </xblock> --%>
 
@@ -76,16 +77,16 @@
             <th>操作</th>
         </thead>
         <tbody>
-        <c:forEach items="${requestScope.list}" var="dept" varStatus="stat">
+        <c:forEach items="${requestScope.list}" var="users" varStatus="stat">
             <tr>
                 <td>
                     <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i
                             class="layui-icon">&#xe605;</i></div>
                 </td>
-                <td>${dept.id}</td>
-                <td>${dept.loginname }</td>
-                <td>${dept.username }</td>
-                <td>${dept.create_date }</td>
+                <td>${users.id}</td>
+                <td>${users.loginname }</td>
+                <td>${users.username }</td>
+                <td>${users.create_date }</td>
 
                 <!--  <td class="td-status">
                    <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td> -->
@@ -93,11 +94,11 @@
                     <!--  <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
                        <i class="layui-icon">&#xe601;</i>
                      </a> -->
-                        <%-- <a title="编辑"  onclick="x_admin_show('编辑','${ctx}/job/add?id=${dept.id }');" href="javascript:;"> --%>
-                    <a title="编辑" href="${ctx}/notice/add?id=${dept.id }">
+                        <%-- <a title="编辑"  onclick="x_admin_show('编辑','${ctx}/job/add?id=${users.id }');" href="javascript:;"> --%>
+                    <a title="编辑" onclick="x_admin_show('编辑','${ctx}/user/add?id=${users.id }');" href="javascript:;">
                         <i class="layui-icon">&#xe642;</i>
                     </a>
-                    <a title="删除" onclick="member_del(this,'${dept.id }')" href="javascript:;">
+                    <a title="删除" onclick="member_del(this,'${users.id }')" href="javascript:;">
                         <i class="layui-icon">&#xe640;</i>
                     </a>
                 </td>

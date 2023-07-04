@@ -129,7 +129,7 @@ public class UserController {
 		@RequestMapping(value="/user/myupdate",method=RequestMethod.GET)
 		 public String update(Model model,HttpSession session){
 			User user = (User) session.getAttribute(Constants.USER_SESSION);
-			model.addAttribute("job",user);
+			model.addAttribute("user",user);
 			return "/user/myupdate";
 		}
 		@RequestMapping(value="/user/myupdate",method=RequestMethod.POST)
