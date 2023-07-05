@@ -31,7 +31,7 @@
       </span>
         <c:choose>
         <c:when test="${sessionScope.tip  == 1 }">
-        <button type="button" onclick="location.href='${ctx}/dept/add'" class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;margin-left:75%;;"  >
+        <button type="button"  onclick="x_admin_show('增加','${ctx}/dept/add');" class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;margin-left:75%;;"  >
             <i class="layui-icon">&#xe608;</i>增加</button>
 
                 <button class="layui-btn layui-btn-danger" onclick="delAll()">
