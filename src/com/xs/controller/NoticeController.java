@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.xs.domain.Notice;
-import com.xs.service.RainService;
+import com.xs.service.HrmService;
 
 @Controller
 public class NoticeController {
 	@Autowired
-	@Qualifier("RainService")
-	private RainService rainservice;
+	@Qualifier("HrmService")
+	private HrmService hrmservice;
 	// 如果在目录下输入为空，则跳转到指定链接
 		@RequestMapping(value="/notice/")
 		 public ModelAndView index2(ModelAndView mv){
@@ -34,9 +34,9 @@ public class NoticeController {
 		}
 		@RequestMapping(value="/notice/list",method=RequestMethod.GET)
 		 public String index(Model model,String content){
-			List<Notice> notice_list = rainservice.get_NoticeList();
+			List<Notice> notice_list = hrmservice.get_NoticeList();
 			if (content!=null){
-				notice_list = rainservice.get_NoticeLikeList(content);
+				notice_list = hrmservice.get_NoticeLikeList(content);
 			}
 			model.addAttribute("list",notice_list);
 			return "notice/list";
@@ -44,7 +44,7 @@ public class NoticeController {
 		@RequestMapping(value="/notice/add",method=RequestMethod.GET)
 		 public String add(Model model,Integer id){
 			if(id!=null){
-				Notice notice = rainservice.get_NoticeInfo(id);
+				Notice notice = hrmservice.get_NoticeInfo(id);
 				model.addAttribute("notice",notice);
 			}
 			return "/notice/add";
@@ -53,9 +53,9 @@ public class NoticeController {
 		 public ModelAndView add(ModelAndView mv,@ModelAttribute Notice notice ,Integer id){
 			System.out.println(id);
 			if(id!=null){
-				rainservice.update_NoticeInfo(notice);
+				hrmservice.update_NoticeInfo(notice);
 			}else{
-				rainservice.insert_NoticeInfo(notice);
+				hrmservice.insert_NoticeInfo(notice);
 			}
 			mv.setViewName("redirect:/notice/list");
 			return mv;
@@ -64,7 +64,7 @@ public class NoticeController {
 		 public void delete(Integer id){
 			System.out.println(id);
 			if(id!=null){
-				rainservice.delete_NoticeInfo(id);
+				hrmservice.delete_NoticeInfo(id);
 			}
 		}
 }

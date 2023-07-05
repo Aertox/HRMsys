@@ -1,7 +1,6 @@
 package com.xs.controller;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -22,13 +20,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import com.xs.domain.Document;
-import com.xs.service.RainService;
+import com.xs.service.HrmService;
 
 @Controller
 public class DocumentController {
 	@Autowired
-	@Qualifier("RainService")
-	private RainService rainservice;
+	@Qualifier("HrmService")
+	private HrmService hrmservice;
 	// 如果在目录下输入为空，则跳转到指定链接
 		@RequestMapping(value="/document/")
 		 public ModelAndView index2(ModelAndView mv){
@@ -43,9 +41,9 @@ public class DocumentController {
 		}
 		@RequestMapping(value="/document/list",method=RequestMethod.GET)
 		 public String index(Model model,String content){
-			List<Document> job_list = rainservice.get_DocumentList();
+			List<Document> job_list = hrmservice.get_DocumentList();
 			if (content!=null){
-				job_list = rainservice.get_DocumentLikeList(content);
+				job_list = hrmservice.get_DocumentLikeList(content);
 			}
 			model.addAttribute("list",job_list);
 			return "document/list";
@@ -53,7 +51,7 @@ public class DocumentController {
 		@RequestMapping(value="/document/add",method=RequestMethod.GET)
 		 public String add(Model model,Integer id){
 			if(id!=null){
-				Document doc = rainservice.get_DocumentInfo(id);
+				Document doc = hrmservice.get_DocumentInfo(id);
 				model.addAttribute("doc",doc);
 			}
 			return "/document/add";
@@ -64,7 +62,7 @@ public class DocumentController {
 				 throws Exception{
 			System.out.println(id);
 			if(id!=null){
-				rainservice.update_DocumentInfo(document);
+				hrmservice.update_DocumentInfo(document);
 			}else{
 				/**
 				 * 上传文件
@@ -79,7 +77,7 @@ public class DocumentController {
 				tempFile.createNewFile();
 				document.getFile().transferTo(tempFile);
 				document.setFilename(filename);
-				rainservice.insert_DocumentInfo(document);
+				hrmservice.insert_DocumentInfo(document);
 			}
 			mv.setViewName("redirect:/document/list");
 			return mv;
@@ -139,7 +137,7 @@ public class DocumentController {
 		 public void delete(Integer id){
 			System.out.println(id);
 			if(id!=null){
-				rainservice.delete_DocumentInfo(id);
+				hrmservice.delete_DocumentInfo(id);
 			}
 		}
 }

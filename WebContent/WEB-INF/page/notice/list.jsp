@@ -65,7 +65,7 @@
     </xblock>-->
 
 
-    <table class="layui-table">
+    <table  id="test1" class="layui-table">
         <thead>
         <tr>
             <th>
@@ -156,7 +156,6 @@
         });
     }
 </script>
-
 
 </body>
 

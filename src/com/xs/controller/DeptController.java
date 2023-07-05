@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.xs.domain.Dept;
-import com.xs.service.RainService;
+import com.xs.service.HrmService;
 
 @Controller
 public class DeptController {
 	@Autowired
-	@Qualifier("RainService")
-	private RainService rainservice;
+	@Qualifier("HrmService")
+	private HrmService hrmservice;
 	
 	// 如果在目录下输入为空，则跳转到指定链接
 	@RequestMapping(value="/dept/")
@@ -38,9 +38,9 @@ public class DeptController {
 	@RequestMapping(value="/dept/list",method=RequestMethod.GET)
 	 public String index(Model model,String content){
 //		System.out.println("4234");
-		List<Dept> dept_list = rainservice.findAllDept();
+		List<Dept> dept_list = hrmservice.findAllDept();
 		if (content!=null){
-			dept_list = rainservice.findAllDept(content);
+			dept_list = hrmservice.findAllDept(content);
 		}
 		
 		model.addAttribute("list",dept_list);
@@ -53,7 +53,7 @@ public class DeptController {
 	 public String add(Model model,Integer id){
 //		System.out.println(id);
 		if(id!=null){
-			Dept dept = rainservice.get_Info(id);
+			Dept dept = hrmservice.get_Info(id);
 			model.addAttribute("dept",dept);
 //			System.out.println(dept.getName());
 		}
@@ -64,10 +64,10 @@ public class DeptController {
 		System.out.println(id);
 //		System.out.println(dept.getId());
 		if(id!=null){
-			rainservice.update_Info(dept);
+			hrmservice.update_Info(dept);
 			System.out.println(dept.getId());
 		}else{
-			rainservice.addDept(dept);
+			hrmservice.addDept(dept);
 		}
 //		System.out.println(dept.getName());
 		mv.setViewName("redirect:/dept/list");
@@ -77,7 +77,7 @@ public class DeptController {
 	 public void delete(Integer id){
 		System.out.println(id);
 		if(id!=null){
-			rainservice.delete_Info(id);
+			hrmservice.delete_Info(id);
 		}
 	}
 }

@@ -23,11 +23,11 @@ import com.xs.domain.Employee;
 import com.xs.domain.Job;
 import com.xs.domain.Notice;
 import com.xs.domain.User;
-import com.xs.service.RainService;
+import com.xs.service.HrmService;
 
 @Transactional(propagation=Propagation.REQUIRED,isolation=Isolation.DEFAULT)
-@Service("RainService")
-public class RainServiceImpl implements RainService{
+@Service("HrmService")
+public class HrmServiceImpl implements HrmService {
 
 	@Autowired
 	private DeptDao deptDao;

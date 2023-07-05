@@ -162,7 +162,10 @@ xblock{
     display: inline-block;
 }
 .x-red{
-    color: #F27457;
+    color: #ffa6a5;
+}
+.x-blue{
+    color: #ffa6a5;
 }
 .x-a{
     color: #1AA093;

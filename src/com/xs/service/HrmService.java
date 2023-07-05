@@ -9,7 +9,7 @@ import com.xs.domain.Employee;
 import com.xs.domain.Job;
 import com.xs.domain.Notice;
 
-public interface RainService {
+public interface HrmService {
 	/**
 	 * 部门信息的service
 	 * @param content

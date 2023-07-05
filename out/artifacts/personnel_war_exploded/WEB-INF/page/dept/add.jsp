@@ -24,7 +24,7 @@
   
   <body>
     <div class="x-body">
-        <form class="layui-form" method="POST" id="deptForm"  action="${ctx}/dept/add">
+        <form class="layui-form " method="POST" id="deptForm"  action="${ctx}/dept/add">
         <input type="hidden" name="id" id="id" value="${dept.id }" >
           <div class="layui-form-item">
               <label for="name" class="layui-form-label">

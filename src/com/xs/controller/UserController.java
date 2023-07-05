@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.xs.domain.User;
-import com.xs.service.RainService;
+import com.xs.service.HrmService;
 import com.xs.util.common.Constants;
 
 @Controller
 public class UserController {
 	@Autowired
-	@Qualifier("RainService")
-	private RainService rainservice;
+	@Qualifier("HrmService")
+	private HrmService hrmservice;
 	// 如果在目录下输入为空，则跳转到指定链接
 		@RequestMapping(value="/user/")
 		 public ModelAndView index2(ModelAndView mv){
@@ -47,7 +47,7 @@ public class UserController {
 			// 调用业务逻辑组件判断用户是否可以登录
 			boolean flag = false;
 			if("1".equals(tip)) {
-				User user = rainservice.login(loginname, password);
+				User user = hrmservice.login(loginname, password);
 				if(user!=null){
 					// 将用户保存到HttpSession当中
 					System.out.println("HttpSession");
@@ -64,7 +64,7 @@ public class UserController {
 					mv.setViewName("forward:/loginForm");
 				}
 			}else {
-				User user = rainservice.login2(loginname, password);
+				User user = hrmservice.login2(loginname, password);
 				if(user!=null){
 					// 将用户保存到HttpSession当中
 					System.out.println("HttpSession");
@@ -92,9 +92,9 @@ public class UserController {
 		}
 		@RequestMapping(value="/user/list",method=RequestMethod.GET)
 		 public String index(Model model,String content){
-			List<User> job_list = rainservice.get_UserList();
+			List<User> job_list = hrmservice.get_UserList();
 			if (content!=null){
-				job_list = rainservice.get_UserLikeList(content);
+				job_list = hrmservice.get_UserLikeList(content);
 			}
 			model.addAttribute("list",job_list);
 			return "user/list";
@@ -102,7 +102,7 @@ public class UserController {
 		@RequestMapping(value="/user/add",method=RequestMethod.GET)
 		 public String add(Model model,Integer id){
 			if(id!=null){
-				User users = rainservice.get_UserInfo(id);
+				User users = hrmservice.get_UserInfo(id);
 				model.addAttribute("users",users);
 			}
 			return "/user/add";
@@ -111,9 +111,9 @@ public class UserController {
 		 public ModelAndView add(ModelAndView mv,@ModelAttribute User notice ,Integer id){
 			System.out.println(id);
 			if(id!=null){
-				rainservice.update_UserInfo(notice);
+				hrmservice.update_UserInfo(notice);
 			}else{
-				rainservice.insert_UserInfo(notice);
+				hrmservice.insert_UserInfo(notice);
 			}
 			mv.setViewName("redirect:/user/list");
 			return mv;
@@ -122,7 +122,7 @@ public class UserController {
 		 public void delete(Integer id){
 			System.out.println(id);
 			if(id!=null){
-				rainservice.delete_UserInfo(id);
+				hrmservice.delete_UserInfo(id);
 			}
 		}
 //		管理员自己修改密码时跳转的页面 
@@ -139,7 +139,7 @@ public class UserController {
 			user.setLoginname(notice.getLoginname());
 			user.setPassword(notice.getPassword());
 			user.setUsername(notice.getUsername());
-			rainservice.update_UserInfo(user);
+			hrmservice.update_UserInfo(user);
 				session.setAttribute(Constants.USER_SESSION, user);
 				mv.setViewName("redirect:/user/myupdate");
 				return mv;

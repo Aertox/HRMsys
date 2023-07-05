@@ -15,13 +15,13 @@ import org.springframework.web.servlet.ModelAndView;
 import com.xs.domain.Dept;
 import com.xs.domain.Employee;
 import com.xs.domain.Job;
-import com.xs.service.RainService;
+import com.xs.service.HrmService;
 
 @Controller
 public class EmployeeController {
 	@Autowired
-	@Qualifier("RainService")
-	private RainService rainservice;
+	@Qualifier("HrmService")
+	private HrmService hrmservice;
 	// 如果在目录下输入为空，则跳转到指定链接
 		@RequestMapping(value="/employee/")
 		 public ModelAndView index2(ModelAndView mv){
@@ -36,9 +36,9 @@ public class EmployeeController {
 		}
 		@RequestMapping(value="/employee/list",method=RequestMethod.GET)
 		 public String index(Model model,String content){
-			List<Employee> job_list = rainservice.get_EmployeeList();
+			List<Employee> job_list = hrmservice.get_EmployeeList();
 			if (content!=null){
-				job_list = rainservice.get_EmployeeLikeList(content);
+				job_list = hrmservice.get_EmployeeLikeList(content);
 			}
 			model.addAttribute("list",job_list);
 			return "employee/list";
@@ -46,11 +46,11 @@ public class EmployeeController {
 		@RequestMapping(value="/employee/add",method=RequestMethod.GET)
 		 public String add(Model model,Integer id){
 			if(id!=null){
-				Employee employee = rainservice.get_EmployeeInfo(id);
+				Employee employee = hrmservice.get_EmployeeInfo(id);
 				model.addAttribute("job",employee);
 			}
-			List<Dept> dept_list = rainservice.findAllDept();
-			List<Job> job_list = rainservice.findAllJob();
+			List<Dept> dept_list = hrmservice.findAllDept();
+			List<Job> job_list = hrmservice.findAllJob();
 			model.addAttribute("job_list", job_list);
 			model.addAttribute("dept_list",dept_list);
 			return "/employee/add";
@@ -59,9 +59,9 @@ public class EmployeeController {
 		 public ModelAndView add(ModelAndView mv,@ModelAttribute Employee job ,Integer id){
 //			System.out.println(id);
 			if(id!=null){
-				rainservice.update_EmployeeInfo(job);
+				hrmservice.update_EmployeeInfo(job);
 			}else{
-				rainservice.insert_EmployeeInfo(job);
+				hrmservice.insert_EmployeeInfo(job);
 			}
 			mv.setViewName("redirect:/employee/list");
 			return mv;
@@ -70,7 +70,7 @@ public class EmployeeController {
 		 public void delete(Integer id){
 //			System.out.println(id);
 			if(id!=null){
-				rainservice.delete_EmployeeInfo(id);
+				hrmservice.delete_EmployeeInfo(id);
 			}
 		}
 }

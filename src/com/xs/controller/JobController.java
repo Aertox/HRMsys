@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.xs.domain.Job;
-import com.xs.service.RainService;
+import com.xs.service.HrmService;
 
 @Controller
 public class JobController {
 	@Autowired
-	@Qualifier("RainService")
-	private RainService rainservice;
+	@Qualifier("HrmService")
+	private HrmService hrmservice;
 	// 如果在目录下输入为空，则跳转到指定链接
 		@RequestMapping(value="/job/")
 		 public ModelAndView index2(ModelAndView mv){
@@ -34,9 +34,9 @@ public class JobController {
 		}
 		@RequestMapping(value="/job/list",method=RequestMethod.GET)
 		 public String index(Model model,String content){
-			List<Job> job_list = rainservice.findAllJob();
+			List<Job> job_list = hrmservice.findAllJob();
 			if (content!=null){
-				job_list = rainservice.findAllJob(content);
+				job_list = hrmservice.findAllJob(content);
 			}
 			model.addAttribute("list",job_list);
 			return "job/list";
@@ -44,7 +44,7 @@ public class JobController {
 		@RequestMapping(value="/job/add",method=RequestMethod.GET)
 		 public String add(Model model,Integer id){
 			if(id!=null){
-				Job job = rainservice.get_JobInfo(id);
+				Job job = hrmservice.get_JobInfo(id);
 				model.addAttribute("job",job);
 			}
 			return "/job/add";
@@ -53,9 +53,9 @@ public class JobController {
 		 public ModelAndView add(ModelAndView mv,@ModelAttribute Job job ,Integer id){
 			System.out.println(id);
 			if(id!=null){
-				rainservice.update_JobInfo(job);
+				hrmservice.update_JobInfo(job);
 			}else{
-				rainservice.insert_JobInfo(job);
+				hrmservice.insert_JobInfo(job);
 			}
 			mv.setViewName("redirect:/job/list");
 			return mv;
@@ -64,7 +64,7 @@ public class JobController {
 		 public void delete(Integer id){
 			System.out.println(id);
 			if(id!=null){
-				rainservice.delete_JobInfo(id);
+				hrmservice.delete_JobInfo(id);
 			}
 		}
 }
