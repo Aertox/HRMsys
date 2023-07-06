@@ -33,12 +33,12 @@
                 <tbody>
                 <tr>
                     <td>
-                        <a class="x-a" href="/" target="_blank">请于6.22日之前到后勤部领取端午福利</a>
+                        <a class="x-a" href="https://github.com/Aertox/hrmsys2.0" target="_blank">请于6.22日之前到后勤部领取端午福利</a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a class="x-a" href="http://www.bing.com" target="_blank">项目上线倒计时</a>
+                        <a class="x-a" href="https://github.com/Aertox/hrmsys2.0" target="_blank">7.7答辩</a>
                     </td>
                 </tr>
                 </tbody>
