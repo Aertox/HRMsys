@@ -1,4 +1,3 @@
-# HRMsys 人事管理系统
 ## 基于SpringMVC+Mybatis框架
 该项目包含了用户管理、部门管理、职位管理、员工管理、公告管理、下载中心等多个模块,页面使用JQuery框架完成动态功能,用户管理、部门管理等模块包含了项目开发中常用的增删改查动作,可以支持人脸识别登陆,下载中心包含了 Spring MVC的文件上传、下载等功能
 
@@ -17,5 +16,13 @@
 ## 测试账号 admin 密码 123
 ## 使用了echarts 对项目内的数据进行了可视化的展示 
 ## 项目预览
-## 人脸识别登陆 采用了百度的api
+<img width="415" alt="image" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/745cf0e6-eb4b-4d6a-8a84-e10b3cb95f0d">
+<img width="415" alt="image" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/066b289b-9101-4dac-9f42-fb1cfd487f3a">
+<img width="1440" alt="login" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/ae73ae28-dede-4aef-94db-71abd8028ddc">
+<img width="1440" alt="notice" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/0c50e850-6b64-4ca6-a77c-bfe581f7dd19">
+<img width="1440" alt="adduser" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/1785d509-9852-47b0-bf87-8ec5f62e8091">
+<img width="1440" alt="addnotice" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/3cc02ca1-ae65-43da-8996-b81d9f2dbf30">
+<img width="1440" alt="addjob" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/99362910-dec6-4063-aa7d-62c4a6807929">
+<img width="1440" alt="addemployee" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/c3c3f8d7-8093-458e-a6d1-2ed649b52ba8">
+<img width="1440" alt="adddept" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/896a55f5-1f01-48b2-9508-0ef79aae713d">
 
