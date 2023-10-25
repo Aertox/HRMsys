@@ -23,6 +23,9 @@
 <img width="1082" alt="image" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/759a18e5-ad4c-4921-9d35-35d63979f2dd">
 管理员账号 admin 123（由于密码并没有加密，所以在数据库中是明文显示，可以自己根据数据库内容尝试进入系统）
 
+## Tips
+本项目同样是基于github中的一个项目修改而来（要是找到原项目会放出链接），本人对于其中的业务关系并没有做太大的完善，仍然存在一些业务逻辑的不完整，但是把项目配置好是可以跑起来的，应付课程设计基本没问题，部署有问题可以尝试联系我 (2063617362@qq.com)
+
 ## 项目预览
 <img width="415" alt="image" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/745cf0e6-eb4b-4d6a-8a84-e10b3cb95f0d">
 <img width="415" alt="image" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/066b289b-9101-4dac-9f42-fb1cfd487f3a">
@@ -34,6 +37,5 @@
 <img width="1440" alt="addemployee" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/c3c3f8d7-8093-458e-a6d1-2ed649b52ba8">
 <img width="1440" alt="adddept" src="https://github.com/Aertox/hrmsys2.0/assets/99350661/896a55f5-1f01-48b2-9508-0ef79aae713d">
 
-## Tips
-本项目同样是基于github中的一个项目修改而来（要是找到原项目会放出链接），本人对于其中的业务关系并没有做太大的完善，仍然存在一些业务逻辑的不完整，但是把项目配置好是可以跑起来的，应付课程设计基本没问题，部署有问题可以尝试联系我 (2063617362@qq.com)
+
 
